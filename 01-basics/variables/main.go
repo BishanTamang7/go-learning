@@ -26,37 +26,54 @@ func main() {
 		fmt.Println(age1)      // Output: 0
 	*/
 
-	// Declaring and initializing a variable
+	/*
+		// Declaring and initializing a variable
 
-	// Declaring a variable
-	var age int
+		// Declaring a variable
+		var age int
 
-	// Assigning a value to the variable
-	age = 25
+		// Assigning a value to the variable
+		age = 25
 
-	// Remember:
-	// Declaring -> Creating a variable and specifying its type.
-	// Assigning -> Giving a value to the variable.
+		// Remember:
+		// Declaring -> Creating a variable and specifying its type.
+		// Assigning -> Giving a value to the variable.
+
+		fmt.Println(age) // Output: 25
+
+		// Practice
+		// Declaring variables
+		var name string
+		var isStudent bool
+		var height float64
+		var age1 int
+
+		// Assigning values to the variables
+		name = "Bishan Tamang"
+		isStudent = true
+		height = 5.7
+		age1 = 22
+
+		// Printing the values of the variables
+		fmt.Println(name)      // Output: Bishan Tamang
+		fmt.Println(isStudent) // Output: true
+		fmt.Println(height)    // Output: 5.7
+		fmt.Println(age1)      // Output: 22
+	*/
+
+	// Declaring and initializing a variable in one line
+	var age int = 25
 
 	fmt.Println(age) // Output: 25
 
 	// Practice
-	// Declaring variables
-	var name string
-	var isStudent bool
-	var height float64
-	var age1 int
+	var name string = "Bishan Tamang"
+	var isStudent bool = true
+	var height float64 = 5.7
+	var age1 int = 22
 
-	// Assigning values to the variables
-	name = "Bishan Tamang"
-	isStudent = true
-	height = 5.7
-	age1 = 22
-
-	// Printing the values of the variables
 	fmt.Println(name)      // Output: Bishan Tamang
 	fmt.Println(isStudent) // Output: true
 	fmt.Println(height)    // Output: 5.7
 	fmt.Println(age1)      // Output: 22
-
 }
