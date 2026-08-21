@@ -61,19 +61,42 @@ func main() {
 		fmt.Println(age1)      // Output: 22
 	*/
 
-	// Declaring and initializing a variable in one line
-	var age int = 25
+	/*
+		// Declaring and initializing a variable in one line
+		var age int = 25
+
+		fmt.Println(age) // Output: 25
+
+		// Practice
+		var name string = "Bishan Tamang"
+		var isStudent bool = true
+		var height float64 = 5.7
+		var age1 int = 22
+
+		fmt.Println(name)      // Output: Bishan Tamang
+		fmt.Println(isStudent) // Output: true
+		fmt.Println(height)    // Output: 5.7
+		fmt.Println(age1)      // Output: 22
+	*/
+
+	// Type inference
+	// Go can infer the type of a variable based on the value assigned to it.
+	// This means you can declare and initialize a variable without explicitly specifying its type.
+
+	// Declaring and initializing a variable with type inference
+	var age = 25 // Go infers that 'age' is of type int
 
 	fmt.Println(age) // Output: 25
 
 	// Practice
-	var name string = "Bishan Tamang"
-	var isStudent bool = true
-	var height float64 = 5.7
-	var age1 int = 22
+	var name = "Bishan Tamang"
+	var isStudent = true
+	var height = 5.7
+	var age1 = 22
 
 	fmt.Println(name)      // Output: Bishan Tamang
 	fmt.Println(isStudent) // Output: true
 	fmt.Println(height)    // Output: 5.7
 	fmt.Println(age1)      // Output: 22
+
 }
