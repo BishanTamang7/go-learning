@@ -101,24 +101,53 @@ func main() {
 		fmt.Println(age1)      // Output: 22
 	*/
 
-	// Short variable declaration
-	// Go provides a shorthand syntax for declaring and initializing variables using the := operator.
-	// This is known as short variable declaration.
+	/*
+		// Short variable declaration
+		// Go provides a shorthand syntax for declaring and initializing variables using the := operator.
+		// This is known as short variable declaration.
+
+		// Declaring and initializing a variable using short variable declaration
+		age := 25 // Go infers that 'age' is of type int
+
+		fmt.Println(age) // Output: 25
+
+		// practice
+		name := "Bishan Tamang"
+		isStudent := true
+		height := 5.7
+		age1 := 22
+
+		fmt.Println(name)      // Output: Bishan Tamang
+		fmt.Println(isStudent) // Output: true
+		fmt.Println(height)    // Output: 5.7
+		fmt.Println(age1)      // Output: 22
+	*/
+
+	// Assignment "=" vs Declaration ":="
+	// The "=" operator is used for assignment, while the ":=" operator is used for declaration and initialization.
+	// The ":=" operator can only be used inside functions, while the "=" operator can be used both inside and outside functions.
 
 	// Declaring and initializing a variable using short variable declaration
 	age := 25 // Go infers that 'age' is of type int
 
 	fmt.Println(age) // Output: 25
 
-	// practice
-	name := "Bishan Tamang"
-	isStudent := true
-	height := 5.7
-	age1 := 22
+	// Assigning a new value to the variable using the "=" operator
+	age = 30
 
-	fmt.Println(name)      // Output: Bishan Tamang
-	fmt.Println(isStudent) // Output: true
-	fmt.Println(height)    // Output: 5.7
-	fmt.Println(age1)      // Output: 22
+	fmt.Println(age) // Output: 30
 
+	// I can't do this:
+	// age := 35
+	// age := 35
+	// This will cause a compilation error because 'age' has already been declared in this scope.
+
+	// However, I can do this:
+	age = 35 // This is valid because I'm just assigning a new value to the existing variable 'age'.
+
+	fmt.Println(age) // Output: 35
+
+	// Remember:
+	// "=" is used for assignment/change an existing variable.
+	// ":=" is used for declaration and initialization.
 }
