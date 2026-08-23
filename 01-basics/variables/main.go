@@ -169,47 +169,103 @@ func main() {
 		println(weight)    // Output: 60.5
 	*/
 
-	// Variable/Go Naming Conventions
-	// 1. Variable names can contain letters, digits, and underscores.
-	// Good
-	userName := "Bishan"
-	user123 := 123
-	user_name := "ABC" // valid, but not idiomatic Go
+	/*
+		// Variable/Go Naming Conventions
+		// 1. Variable names can contain letters, digits, and underscores.
+		// Good
+		userName := "Bishan"
+		user123 := 123
+		user_name := "ABC" // valid, but not idiomatic Go
 
-	// Bad
-	user - name := "Bishan" // hyphs is not allowed
-	user.name := "bishan"   // dot is not allowed in a variable declaration
+		// Bad
+		user - name := "Bishan" // hyphs is not allowed
+		user.name := "bishan"   // dot is not allowed in a variable declaration
 
-	// 2. Variable names must start with a letter or an underscore.
-	// Good 
-	userName := "Bishan"
-	_userName := "Bishan"
+		// 2. Variable names must start with a letter or an underscore.
+		// Good
+		userName := "Bishan"
+		_userName := "Bishan"
 
-	// Bad
-	123user := "Bishan" // variable names cannot start with a digit
+		// Bad
+		123user := "Bishan" // variable names cannot start with a digit
 
-	// 3. Variable names are case-sensitive.
-	name := "Bishan"
-	Name := "Tamang" // This is a different variable from 'name' because Go is case-sensitive.
+		// 3. Variable names are case-sensitive.
+		name := "Bishan"
+		Name := "Tamang" // This is a different variable from 'name' because Go is case-sensitive.
 
-	fmt.Println(name) // Output: Bishan
-	fmt.Println(Name) // Output: Tamang
+		fmt.Println(name) // Output: Bishan
+		fmt.Println(Name) // Output: Tamang
 
-	// 4. Variable names should not be Go keywords.
-	// Good
-	var age int = 22 // 'age' is not a Go keyword
-	
-	// Bad
-	var var int = 22 // 'var' is a Go keyword, so this will cause a compilation error.
-	func := "myFunction" // 'func' is a Go keyword, so this will cause a compilation error.
+		// 4. Variable names should not be Go keywords.
+		// Good
+		var age int = 22 // 'age' is not a Go keyword
 
-	// 5. Go generally uses camelCase for variable names.
-	// Good 
-	firstName := "Bishan"
-	totalAmount := 100.50
-	userAge := 22
-	
-	// Valid but not idiomatic Go
-	First_name := "Bishan"  
-	total_amount := 100.50
+		// Bad
+		var var int = 22 // 'var' is a Go keyword, so this will cause a compilation error.
+		func := "myFunction" // 'func' is a Go keyword, so this will cause a compilation error.
+
+		// 5. Go generally uses camelCase for variable names.
+		// Good
+		firstName := "Bishan"
+		totalAmount := 100.50
+		userAge := 22
+
+		// Valid but not idiomatic Go
+		First_name := "Bishan"
+		total_amount := 100.50
+	*/
+
+	/*
+		// Constants
+		// Constants are immutable values that are known at compile time and do not change during the execution of a program.
+		// They are declared using the 'const' keyword.
+
+		// Declaring a constant
+		const pi = 3.14
+
+		// Printing the value of the constant
+		println(pi) // Output: 3.14
+
+		// Practice
+		const gravity = 9.81
+		const speedOfLight = 299792458 // in meters per second
+
+		println(gravity)      // Output: 9.81
+		println(speedOfLight) // Output: 299792458
+	*/
+
+	// Type Conversion
+	// In Go, you can convert a value from one type to another using type conversion.
+	// Type conversion is done by specifying the target type in parentheses before the value to be converted.
+
+	// Example of type conversion
+	var age int = 25
+	var ageFloat float64 = float64(age) // Converting int to float64
+
+	println(age)      // Output: 25
+	println(ageFloat) // Output: 25.0
+
+	// Go does not perform implicit type conversion, so you must explicitly convert types when necessary.
+	// For example,
+	var num1 int = 10
+	var num2 float64 = 5.5
+
+	// var result = num1 + num2 // This will cause a compilation error because num1 is an int and num2 is a float64.
+	// To fix this, you need to convert one of the values to the other type:
+	var resultFixed = float64(num1) + num2 // Now both values are of type float64, so the addition is valid.
+
+	println(resultFixed) // Output: 15.5
+
+	// Go also does not allow you to convert between types that are not compatible, such as converting a string to an int.
+	// Go does not round numbers when converting from float to int; it simply truncates the decimal part.
+	// Converting a float64 to an int will result in the decimal part being discarded.
+	// If you try to convert a float64 value of 5.9 to an int, the result will be 5, not 6.
+
+	// Practice
+	var height float64 = 5.9
+	var heightInt int = int(height) // Converting float64 to int
+
+	println(height)    // Output: 5.9
+	println(heightInt) // Output: 5
+
 }
