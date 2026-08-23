@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	/*
 		// Declaring a variable
@@ -123,31 +121,95 @@ func main() {
 		fmt.Println(age1)      // Output: 22
 	*/
 
-	// Assignment "=" vs Declaration ":="
-	// The "=" operator is used for assignment, while the ":=" operator is used for declaration and initialization.
-	// The ":=" operator can only be used inside functions, while the "=" operator can be used both inside and outside functions.
+	/*
+		// Assignment "=" vs Declaration ":="
+		// The "=" operator is used for assignment, while the ":=" operator is used for declaration and initialization.
+		// The ":=" operator can only be used inside functions, while the "=" operator can be used both inside and outside functions.
 
-	// Declaring and initializing a variable using short variable declaration
-	age := 25 // Go infers that 'age' is of type int
+		// Declaring and initializing a variable using short variable declaration
+		age := 25 // Go infers that 'age' is of type int
 
-	fmt.Println(age) // Output: 25
+		fmt.Println(age) // Output: 25
 
-	// Assigning a new value to the variable using the "=" operator
-	age = 30
+		// Assigning a new value to the variable using the "=" operator
+		age = 30
 
-	fmt.Println(age) // Output: 30
+		fmt.Println(age) // Output: 30
 
-	// I can't do this:
-	// age := 35
-	// age := 35
-	// This will cause a compilation error because 'age' has already been declared in this scope.
+		// I can't do this:
+		// age := 35
+		// age := 35
+		// This will cause a compilation error because 'age' has already been declared in this scope.
 
-	// However, I can do this:
-	age = 35 // This is valid because I'm just assigning a new value to the existing variable 'age'.
+		// However, I can do this:
+		age = 35 // This is valid because I'm just assigning a new value to the existing variable 'age'.
 
-	fmt.Println(age) // Output: 35
+		fmt.Println(age) // Output: 35
 
-	// Remember:
-	// "=" is used for assignment/change an existing variable.
-	// ":=" is used for declaration and initialization.
+		// Remember:
+		// "=" is used for assignment/change an existing variable.
+		// ":=" is used for declaration and initialization.
+	*/
+
+	/*
+		// Multiple variable declaration and initialization
+		// Go allows you to declare and initialize multiple variables in a single line.
+
+		// Declaring and initializing multiple variables in one line
+		var name, age, isStudent = "Bishan Tamang", 22, true
+
+		// Declaring and initializing multiple variables using short variable declaration
+		height, weight := 5.7, 60.5
+
+		// Printing the values of the variables
+		println(name)      // Output: Bishan Tamang
+		println(age)       // Output: 22
+		println(isStudent) // Output: true
+		println(height)    // Output: 5.7
+		println(weight)    // Output: 60.5
+	*/
+
+	// Variable/Go Naming Conventions
+	// 1. Variable names can contain letters, digits, and underscores.
+	// Good
+	userName := "Bishan"
+	user123 := 123
+	user_name := "ABC" // valid, but not idiomatic Go
+
+	// Bad
+	user - name := "Bishan" // hyphs is not allowed
+	user.name := "bishan"   // dot is not allowed in a variable declaration
+
+	// 2. Variable names must start with a letter or an underscore.
+	// Good 
+	userName := "Bishan"
+	_userName := "Bishan"
+
+	// Bad
+	123user := "Bishan" // variable names cannot start with a digit
+
+	// 3. Variable names are case-sensitive.
+	name := "Bishan"
+	Name := "Tamang" // This is a different variable from 'name' because Go is case-sensitive.
+
+	fmt.Println(name) // Output: Bishan
+	fmt.Println(Name) // Output: Tamang
+
+	// 4. Variable names should not be Go keywords.
+	// Good
+	var age int = 22 // 'age' is not a Go keyword
+	
+	// Bad
+	var var int = 22 // 'var' is a Go keyword, so this will cause a compilation error.
+	func := "myFunction" // 'func' is a Go keyword, so this will cause a compilation error.
+
+	// 5. Go generally uses camelCase for variable names.
+	// Good 
+	firstName := "Bishan"
+	totalAmount := 100.50
+	userAge := 22
+	
+	// Valid but not idiomatic Go
+	First_name := "Bishan"  
+	total_amount := 100.50
 }
