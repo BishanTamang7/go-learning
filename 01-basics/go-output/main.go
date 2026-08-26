@@ -37,5 +37,77 @@ func main() {
 
 	fmt.Println(s, t)
 
-	// 3. Printf()
+	// 3. Printf() means Print Formatted.
+	// Unlike Print() and Println(), Printf() lets you control how values are displayed using format verbs.
+	// 1. Basic Example
+	name := "Bishan"
+	age := 22
+
+	fmt.Printf("My name is %s. I am %d Years Old.", name, age) // Output: My name is Bishan. I am 22 Years Old.
+
+	// Here:
+	// . %s -> string
+	// . %d -> integer
+	// . name -> replace %s
+	// . age -> replace %d
+
+	// 2. Why do we need %s and %d?
+	// With Printf(), you tell Go where and how to put each value.
+	// For example:
+	fmt.Printf("Hello %s", name) // Output: Hello Bishan
+
+	// %s is a format verb.
+	// It tells Printf():
+	// "Put a string value here"
+
+	// 3. Most important format verbs
+	// As a beginner, focus on these first:
+
+	/*
+		Verb			Used For			Example
+		%s				String				"Bishan"
+		%d				Integer				22
+		%f				Floating-Point		3.14
+		%t				Boolean				true
+		%c				Character			'A'
+		%v				Default value		Any Value
+	*/
+
+	// Example
+	name1 := "Ram"
+	age7 := 22
+	height := 5.7
+	isStuednt := true
+	grade := 'A'
+	intro := "I am Bishan Tamang"
+
+	fmt.Printf("Name: %s", name1)
+	fmt.Printf("Age: %d", age7)
+	fmt.Printf("Height: %f", height)
+	fmt.Printf("isStudent: %t", isStuednt)
+	fmt.Printf("Grade: %c", grade)
+	fmt.Printf("Introduction: %v", intro)
+
+	// 4. %v — very useful
+	// %v means:
+	// Print the value in its default format.
+	// Example:
+	name2 := "Bishan Tamang"
+	age9 := 22
+
+	fmt.Printf("Name: %v", name2)
+	fmt.Printf("Age: %v", age9)
+
+	// You can also do:
+	fmt.Printf("Name: %v, Age: %v", name2, age9)
+	// For now, %v is a very useful general-purpose verb, while %s, %d, %f, etc. give you more control.
+
+	// 5. Printf() does NOT automatically add a newline
+	fmt.Printf("Hello")
+	fmt.Printf("World")
+
+	// If you want a new line, use \n:
+	fmt.Printf("Hello\n")
+	fmt.Printf("World\n")
+	// So, Printf() does not automatically add a newline.
 }
