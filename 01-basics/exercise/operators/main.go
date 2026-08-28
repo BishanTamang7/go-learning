@@ -8,6 +8,7 @@ func main() {
 	b := 5
 
 	// Calculate addition.
+	fmt.Println(a + b) // Output: 25
 	// 2. Calculate subtraction using the same variables.
 	fmt.Println(a - b) // Output: 15
 
