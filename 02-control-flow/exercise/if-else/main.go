@@ -10,9 +10,11 @@ func main() {
 	fmt.Scan(&number)
 
 	if number > 0 {
-		fmt.Println(number, "is Postive Number.")
-	} else {
+		fmt.Println(number, "is Positive Number.")
+	} else if number < 0 {
 		fmt.Println(number, "is Negative Number.")
+	} else {
+		fmt.Println("The number is Zero.")
 	}
 
 	// 2. Create a number and check whether it is even or odd.
@@ -76,7 +78,7 @@ func main() {
 	// 7. Create a number and check whether it is divisible by 5.
 	number2 := 10
 
-	if number2/5 == 0 {
+	if number2%5 == 0 {
 		fmt.Println(number2, "is divisible by 5.")
 	} else {
 		fmt.Println(number2, "is not divisible by 5.")
@@ -107,12 +109,12 @@ func main() {
 	}
 
 	// 10. Create a password variable. If it equals "12345", print "Correct Password", otherwise print "Wrong Password".
-	var password int
+	var password string
 
 	fmt.Print("Enter Your Password: ")
 	fmt.Scan(&password)
 
-	if password == 12345 {
+	if password == "12345" {
 		fmt.Println("Correct Password.")
 	} else {
 		fmt.Println("Wrong Password.")
@@ -124,13 +126,13 @@ func main() {
 
 	fmt.Print("Enter num6: ")
 	fmt.Scan(&num6)
-	fmt.Print("Enter num4: ")
+	fmt.Print("Enter num7: ")
 	fmt.Scan(&num7)
 
 	if num6 > num7 {
-		fmt.Println(a, "is greater than", b)
+		fmt.Println(num6, "is greater than", num7)
 	} else if num6 < num7 {
-		fmt.Println(b, "is grater then", a)
+		fmt.Println(num7, "is grater then", num6)
 	} else {
 		fmt.Println("Both are equal")
 	}
@@ -157,5 +159,99 @@ func main() {
 		fmt.Println("Free Delivery.")
 	} else {
 		fmt.Println("Delivery Charge Applies.")
+	}
+
+	// 14. Create username and password. Check whether both match predefined values.
+	var username string
+	var password1 int
+
+	fmt.Print("Enter a Username: ")
+	fmt.Scan(&username)
+
+	fmt.Print("Enter a Password: ")
+	fmt.Scan(&password1)
+
+	if username == "bishan" && password1 == 123 {
+		fmt.Println("Both match predefined values.")
+	} else {
+		fmt.Println("Both did not match predefined values.")
+	}
+
+	// 15. Take a number from the user and check whether it is a multiple of 10.
+	var number3 int
+
+	fmt.Print("Enter a Number: ")
+	fmt.Scan(&number3)
+
+	if number3%10 == 0 {
+		fmt.Println(number3, "is multiple of 10.")
+	} else {
+		fmt.Println(number3, "is not multiiple of 10.")
+	}
+
+	// 16. Take an age and print "Child" if below 13, otherwise "Not Child".
+	var age10 int
+
+	fmt.Print("Enter Your Age: ")
+	fmt.Scan(&age10)
+
+	if age10 < 13 {
+		fmt.Println("Child.")
+	} else {
+		fmt.Println("Not Child.")
+	}
+
+	// 17. Create two players' scores. Print "Player 1 Wins" if the first score is greater, otherwise "Player 2 Wins".
+	var scores1 int
+	var scores2 int
+
+	fmt.Print("Enter Player 1 Score: ")
+	fmt.Scan(&scores1)
+
+	fmt.Print("Enter Player 2 Score: ")
+	fmt.Scan(&scores2)
+
+	if scores1 > scores2 {
+		fmt.Println("Player 1 Wins.")
+	} else if scores2 > scores1 {
+		fmt.Println("Player 2 Wins.")
+	} else {
+		fmt.Println("It's a Tie")
+	}
+
+	// 18. Take a number and check whether it is exactly 100.
+	var number77 int
+
+	fmt.Print("Enter a Number: ")
+	fmt.Scan(&number77)
+
+	if number77 == 100 {
+		fmt.Println("Exactly 100.")
+	} else {
+		fmt.Println("Not Exectly 100.")
+	}
+
+	// 19. Create a salary. If it is greater than 50,000, print "High Salary", otherwise print "Regular Salary".
+	var salary int
+
+	fmt.Print("Enter a Salary: ")
+	fmt.Scan(&salary)
+
+	if salary > 50000 {
+		fmt.Println("High Salary.")
+	} else {
+		fmt.Println("Regular Salary.")
+	}
+
+	// 20. Take a password string. If its length is at least 8, print "Strong Enough", otherwise print "Too Short".
+	var password11 string
+
+	fmt.Print("Enter a Password: ")
+	fmt.Scan(&password11)
+
+	if len(password11) >= 8 {
+		fmt.Println("Strong Enough")
+	} else {
+		fmt.Println("Too Short.")
 	}
 }
