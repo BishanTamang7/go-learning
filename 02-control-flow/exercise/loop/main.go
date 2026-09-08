@@ -87,4 +87,83 @@ func main() {
 		}
 	}
 	fmt.Println(sum1)
+
+	// 13. User Number. Take a number n and print numbers from 1 to n.
+	var n int
+
+	fmt.Print("Enter a number: ")
+	fmt.Scan(&n)
+
+	for o := 1; o <= n; o++ {
+		fmt.Println(o)
+	}
+
+	// 14. Reverse Counting
+	// Take n1 and print from n down to 1.
+	var n1 int
+
+	fmt.Print("Enter a number: ")
+	fmt.Scan(&n1)
+
+	for p := n1; p >= 1; p-- {
+		fmt.Println(p)
+	}
+
+	// 15. Sum 1–100
+	// Calculate the sum from 1 to 100.
+	sum2 := 0
+
+	for q := 1; q <= 100; q++ {
+		sum2 += q
+	}
+	fmt.Println(sum2)
+
+	// 16. Sum Odd Numbers
+	// Find the sum of odd numbers from 1 to 100.
+	sum3 := 0
+	for r := 1; r <= 100; r++ {
+		if r%2 != 0 {
+			sum3 += r
+		}
+	}
+	fmt.Println(sum3)
+
+	// 17. Multiplication Table
+	// Take a number and print its multiplication table from 1 to 10.
+	var number7 int
+
+	fmt.Print("Enter a multiplication number: ")
+	fmt.Scan(&number7)
+
+	for s := 1; s <= 10; s++ {
+		fmt.Println(number7 * s)
+	}
+
+	// 18. Square Numbers
+	// Print the squares of numbers from 1 to 10.
+	for t := 1; t <= 10; t++ {
+		fmt.Println(t * t)
+	}
+
+	// 19. Cube Numbers
+	// Print the cubes of numbers from 1 to 10.
+	for v := 1; v <= 10; v++ {
+		fmt.Println(v * v * v)
+	}
+
+	// 20. Count Numbers
+	// Take number77 and count how many numbers from 1 to number77 are even.
+	var number77 int
+
+	fmt.Print("Enter a Number: ")
+	fmt.Scan(&number77)
+
+	count7 := 0
+
+	for x := 1; x <= number77; x++ {
+		if x%2 == 0 {
+			count7 = count7 + 1
+		}
+	}
+	fmt.Println(count7)
 }
